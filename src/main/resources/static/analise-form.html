@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Nova análise | Cinema Cultural</title><link rel="stylesheet" href="css/styles.css"><script src="js/app.js" defer></script><script src="js/analise-form.js" defer></script></head>
+<body data-page="form-analise"><header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span>Cinema Cultural</span></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a class="nav-link" href="index.html">Filmes</a><a class="nav-link active" href="analises.html">Análises</a></nav>
+    <div class="header-actions"><button id="toggle-theme" class="button button-quiet" type="button">Tema escuro</button></div>
+</div></header>
+<main class="page-shell narrow-shell"><a id="voltar-filme" class="back-link" href="index.html">← Voltar</a><section class="form-intro"><h1 id="titulo-form-analise">Escrever uma análise</h1><p>Escolha o filme, escreva seu comentário e dê uma nota de 0 a 10.</p></section>
+<form id="form-analise" class="form-card" novalidate><div class="form-grid">
+    <label class="form-field full-width">Filme *<select id="filmeId" name="filmeId" required><option value="">Selecione um filme</option></select><span class="field-error" id="erro-filme"></span></label>
+    <label class="form-field full-width">Comentário *<textarea id="texto-analise" name="texto" rows="6" maxlength="2000" required placeholder="Escreva o que achou do filme"></textarea><span class="field-hint">Mínimo de 10 caracteres.</span><span class="field-error" id="erro-texto"></span></label>
+    <label class="form-field rating-field">Nota *<input type="number" id="nota" name="nota" min="0" max="10" step="0.5" required placeholder="0 a 10"><span class="field-hint">Intervalos de 0,5.</span><span class="field-error" id="erro-nota"></span></label>
+</div><div class="form-actions"><a id="cancelar-analise" href="analises.html" class="button button-quiet">Cancelar</a><button class="button button-primary" id="salvar-analise" type="submit">Publicar análise</button></div></form></main>
+<footer class="site-footer"><span>Cinema Cultural © <span class="current-year"></span></span><a href="wireframes/index.html">Wireframes</a></footer><div id="toast-area" class="toast-area" aria-live="polite" aria-atomic="true"></div></body></html>

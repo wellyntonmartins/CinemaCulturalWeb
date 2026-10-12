@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Análises | Cinema Cultural</title><link rel="stylesheet" href="css/styles.css"><script src="js/app.js" defer></script><script src="js/analises.js" defer></script></head>
+<body data-page="analises"><header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span>Cinema Cultural</span></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a class="nav-link" href="index.html">Filmes</a><a class="nav-link active" href="analises.html">Análises</a></nav>
+    <div class="header-actions"><button id="toggle-theme" class="button button-quiet" type="button">Tema escuro</button><a class="button button-primary" href="analise-form.html">+ Nova análise</a></div>
+</div></header>
+<main class="page-shell">
+    <section class="page-heading"><div><h1>Análises</h1><p>Notas e comentários sobre os filmes do catálogo.</p></div><div class="heading-stat"><strong id="total-analises">0</strong><span>análises</span></div></section>
+    <form id="filtro-analises" class="filter-bar"><label class="search-field"><span class="sr-only">Buscar análises</span><input type="search" id="busca-analise" placeholder="Buscar por filme ou comentário"></label><label class="filter-field"><span class="sr-only">Filtrar por nota</span><select id="filtro-nota"><option value="">Todas as notas</option><option value="9">9 ou mais</option><option value="7">7 ou mais</option><option value="5">5 ou mais</option><option value="0">Abaixo de 5</option></select></label><label class="filter-field"><span class="sr-only">Ordenar análises</span><select id="ordem-analises"><option value="recentes">Mais recentes</option><option value="nota-desc">Maior nota</option><option value="nota-asc">Menor nota</option></select></label></form>
+    <div id="lista-analises" class="review-grid" aria-live="polite"></div>
+</main><footer class="site-footer"><span>Cinema Cultural © <span class="current-year"></span></span><a href="wireframes/index.html">Wireframes</a></footer><div id="toast-area" class="toast-area" aria-live="polite" aria-atomic="true"></div></body></html>

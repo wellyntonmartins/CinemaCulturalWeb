@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo filme | Cinema Cultural</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/filme-form.js" defer></script>
+</head>
+<body data-page="form-filme">
+<header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span>Cinema Cultural</span></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a class="nav-link active" href="index.html">Filmes</a><a class="nav-link" href="analises.html">Análises</a></nav>
+    <div class="header-actions"><button id="toggle-theme" class="button button-quiet" type="button">Tema escuro</button></div>
+</div></header>
+<main class="page-shell narrow-shell"><a class="back-link" href="index.html">← Voltar para filmes</a>
+    <section class="form-intro"><h1 id="form-titulo-pagina">Cadastrar filme</h1><p>Preencha os dados do filme. Os campos com * são obrigatórios.</p></section>
+    <form id="form-filme" class="form-card" novalidate>
+        <div class="form-grid">
+            <label class="form-field full-width">Título *<input type="text" id="titulo" name="titulo" maxlength="120" required placeholder="Ex.: Central do Brasil"><span class="field-error" id="erro-titulo"></span></label>
+            <label class="form-field">Gênero *<select id="genero" name="genero" required><option value="">Selecione um gênero</option><option>Drama</option><option>Comédia</option><option>Ação</option><option>Aventura</option><option>Ficção científica</option><option>Suspense</option><option>Fantasia</option><option>Animação</option><option>Documentário</option><option>Romance</option><option>Terror</option><option>Outro</option></select><span class="field-error" id="erro-genero"></span></label>
+            <label class="form-field">Ano de lançamento *<input type="number" id="anoLancamento" name="anoLancamento" min="1888" max="2100" required placeholder="Ex.: 1998"><span class="field-error" id="erro-ano"></span></label>
+            <label class="form-field full-width">Sinopse *<textarea id="sinopse" name="sinopse" rows="5" maxlength="1500" required placeholder="Resumo da história do filme"></textarea><span class="field-hint">Mínimo de 20 caracteres.</span><span class="field-error" id="erro-sinopse"></span></label>
+        </div>
+        <div class="form-actions"><a href="index.html" class="button button-quiet">Cancelar</a><button id="salvar-filme" class="button button-primary" type="submit">Salvar filme</button></div>
+    </form>
+</main>
+<footer class="site-footer"><span>Cinema Cultural © <span class="current-year"></span></span><a href="wireframes/index.html">Wireframes</a></footer><div id="toast-area" class="toast-area" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

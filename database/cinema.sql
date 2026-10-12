@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS cinema;
+USE cinema;
+
+CREATE TABLE IF NOT EXISTS filmes (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    sinopse TEXT NOT NULL,
+    genero VARCHAR(100) NOT NULL,
+    ano_lancamento INT NOT NULL,
+    cor VARCHAR(7) NOT NULL DEFAULT '#475b77'
+);
+
+CREATE TABLE IF NOT EXISTS analises (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    filme_id BIGINT NOT NULL,
+    analise TEXT NOT NULL,
+    nota DOUBLE NOT NULL,
+    data DATE NOT NULL,
+    CONSTRAINT fk_analise_filme FOREIGN KEY (filme_id) REFERENCES filmes(id) ON DELETE CASCADE
+);

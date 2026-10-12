@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do filme | Cinema Cultural</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/filme.js" defer></script>
+</head>
+<body data-page="detalhes">
+<header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span>Cinema Cultural</span></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a class="nav-link active" href="index.html">Filmes</a><a class="nav-link" href="analises.html">Análises</a></nav>
+    <div class="header-actions"><button id="toggle-theme" class="button button-quiet" type="button">Tema escuro</button><a class="button button-primary" href="filme-form.html">+ Novo filme</a></div>
+</div></header>
+<main class="page-shell">
+    <a class="back-link" href="index.html">← Voltar para filmes</a>
+    <section id="filme-nao-encontrado" class="empty-state hidden"><h2>Filme não encontrado</h2><p>Ele pode ter sido removido ou o endereço está incorreto.</p><a href="index.html" class="button button-primary">Voltar ao catálogo</a></section>
+    <div id="detalhe-conteudo" class="hidden">
+        <section class="detail-hero">
+            <div id="detalhe-poster" class="detail-poster" aria-hidden="true"><span class="poster-kicker">CINEMA CULTURAL</span><strong id="poster-titulo">Filme</strong><span id="poster-genero">Gênero</span><span class="poster-footer">FILME</span></div>
+            <div class="detail-copy"><div class="eyebrow">DETALHES</div><h1 id="filme-titulo"></h1><div class="metadata"><span id="filme-genero" class="pill"></span><span id="filme-ano"></span><span id="filme-quantidade-analises"></span></div><div class="average-rating"><span class="star">★</span><strong id="filme-nota-media">—</strong><span class="muted-text">nota média</span></div><h2>Sinopse</h2><p id="filme-sinopse" class="synopsis"></p><div class="action-row"><a id="editar-filme" class="button button-secondary" href="filme-form.html">Editar filme</a><a id="nova-analise" class="button button-primary" href="analise-form.html">+ Adicionar análise</a><button id="excluir-filme" class="button button-danger-outline" type="button">Excluir filme</button></div></div>
+        </section>
+        <section class="section-heading"><h2>Análises deste filme</h2><a id="link-nova-analise" class="text-link" href="analise-form.html">Escrever análise</a></section>
+        <div id="lista-analises-filme" class="review-list" aria-live="polite"></div>
+    </div>
+</main>
+<footer class="site-footer"><span>Cinema Cultural © <span class="current-year"></span></span><a href="wireframes/index.html">Wireframes</a></footer>
+<div id="toast-area" class="toast-area" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
